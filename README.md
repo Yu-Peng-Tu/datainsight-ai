@@ -2,13 +2,7 @@
 
 > 让数据洞察触手可及 — 上传 CSV/Excel，即刻获取分析与可视化。
 
-[![Deploy to Render](https://render.com/images/deploy-to-render-button.svg)](https://render.com/deploy?repo=https://github.com/Yu-Peng-Tu/datainsight-ai)
-
 DataInsight AI 是一个数据智能分析平台，帮助用户快速理解数据。上传数据文件后，系统自动完成数据解析、统计分析、生成可视化图表，并产出结构化分析报告。支持通过自然语言与数据进行对话式探索。
-
-## 在线演示
-
-点击上方 **「Deploy to Render」** 按钮即可一键部署到公网（免费）。部署约需 5 分钟。
 
 ## 功能
 
@@ -37,7 +31,7 @@ git clone https://github.com/Yu-Peng-Tu/datainsight-ai.git
 cd datainsight-ai
 ```
 
-### 2. 启动服务
+### 2. 启动后端
 
 ```bash
 cd backend
@@ -52,10 +46,20 @@ cp .env.example .env
 uvicorn app.main:app --reload --port 8000
 ```
 
-服务运行在 http://localhost:8000
+后端运行在 http://localhost:8000
 API 文档：http://localhost:8000/docs
 
-### 3. 测试数据
+### 3. 启动前端
+
+```bash
+cd frontend
+npm install
+npm run dev
+```
+
+前端运行在 http://localhost:5173
+
+### 4. 测试数据
 
 项目包含 `backend/data/sales_demo.csv`（150 行模拟销售数据），可直接上传体验。
 
