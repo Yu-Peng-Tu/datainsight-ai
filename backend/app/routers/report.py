@@ -136,7 +136,7 @@ async def generate_report(task_id: int, db: Session = Depends(get_db)):
 ---
 
 > 本报告由 DataInsight AI 自动生成
-> 项目地址: https://github.com/yourusername/datainsight-ai
+> 项目地址: https://github.com/Yu-Peng-Tu/datainsight-ai
 """
 
     return {
