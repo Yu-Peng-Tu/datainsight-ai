@@ -2,11 +2,13 @@
 
 > 让数据洞察触手可及 — 上传 CSV/Excel，即刻获取分析与可视化。
 
+[![Deploy to Render](https://render.com/images/deploy-to-render-button.svg)](https://render.com/deploy?repo=https://github.com/Yu-Peng-Tu/datainsight-ai)
+
 DataInsight AI 是一个数据智能分析平台，帮助用户快速理解数据。上传数据文件后，系统自动完成数据解析、统计分析、生成可视化图表，并产出结构化分析报告。支持通过自然语言与数据进行对话式探索。
 
-## 演示
+## 在线演示
 
-（建议在此补充项目截图或 GIF 演示）
+点击上方 **「Deploy to Render」** 按钮即可一键部署到公网（免费）。部署约需 5 分钟。
 
 ## 功能
 
