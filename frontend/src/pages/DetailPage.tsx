@@ -4,7 +4,7 @@ import { Card, Table, Tag, Typography, Button, Row, Col, Statistic, Spin, Alert 
 import { ArrowLeftOutlined, BarChartOutlined, RobotOutlined } from '@ant-design/icons'
 import api from '../api/client'
 
-const { Title, Text } = Typography
+const { Title } = Typography
 
 interface TaskDetail {
   id: number
@@ -167,7 +167,7 @@ function DetailPage() {
         <Table
           dataSource={preview?.data || []}
           columns={tableColumns}
-          rowKey={(record, index) => index?.toString() || '0'}
+          rowKey={(_record, index) => index?.toString() || '0'}
           pagination={{ pageSize: 10, showSizeChanger: false }}
           size="small"
           scroll={{ x: 'max-content' }}

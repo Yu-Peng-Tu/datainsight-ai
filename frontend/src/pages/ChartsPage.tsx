@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react'
 import { useParams, useNavigate } from 'react-router-dom'
-import { Card, Button, Typography, Spin, Alert, Row, Col, Tabs } from 'antd'
+import { Card, Button, Typography, Spin, Alert, Tabs } from 'antd'
 import { ArrowLeftOutlined, FileTextOutlined, BarChartOutlined } from '@ant-design/icons'
 import ReactECharts from 'echarts-for-react'
 import api from '../api/client'

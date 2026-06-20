@@ -1,10 +1,10 @@
 import { useEffect, useState, useRef } from 'react'
 import { useParams, useNavigate } from 'react-router-dom'
-import { Card, Button, Typography, Input, List, Avatar, Spin, Alert, Divider } from 'antd'
-import { ArrowLeftOutlined, RobotOutlined, UserOutlined, SendOutlined } from '@ant-design/icons'
+import { Card, Button, Typography, Input, List, Spin, Alert, Divider } from 'antd'
+import { ArrowLeftOutlined, RobotOutlined, SendOutlined } from '@ant-design/icons'
 import api from '../api/client'
 
-const { Title, Text } = Typography
+const { Title } = Typography
 const { TextArea } = Input
 
 interface ChatMessage {

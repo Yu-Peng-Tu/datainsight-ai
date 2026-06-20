@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react'
 import { useParams, useNavigate } from 'react-router-dom'
-import { Card, Button, Typography, Spin, Alert, Divider } from 'antd'
+import { Card, Button, Typography, Spin, Alert } from 'antd'
 import { ArrowLeftOutlined, DownloadOutlined } from '@ant-design/icons'
 import api from '../api/client'
 
