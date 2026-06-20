@@ -1,5 +1,7 @@
-from fastapi import FastAPI
+from fastapi import FastAPI, HTTPException
 from fastapi.middleware.cors import CORSMiddleware
+from fastapi.responses import FileResponse
+import os
 
 from app.config import settings
 from app.database import init_db
@@ -14,7 +16,7 @@ app = FastAPI(
 # 跨域配置
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=["*"],  # 生产环境请限制具体域名
+    allow_origins=["*"],
     allow_credentials=True,
     allow_methods=["*"],
     allow_headers=["*"],
@@ -33,17 +35,22 @@ async def startup_event():
     init_db()
 
 
-@app.get("/")
-async def root():
-    """健康检查"""
-    return {
-        "name": settings.APP_NAME,
-        "version": settings.APP_VERSION,
-        "status": "running"
-    }
-
-
 @app.get("/api/health")
 async def health_check():
     """API 健康检查"""
     return {"status": "ok"}
+
+
+# SPA 回退路由：API 路由优先，其余返回静态文件或 index.html
+@app.get("/{full_path:path}")
+async def serve_spa(full_path: str):
+    """提供前端静态文件，支持 SPA 路由回退"""
+    static_dir = os.path.join(os.path.dirname(__file__), "static")
+    file_path = os.path.join(static_dir, full_path)
+
+    # 如果文件存在则返回
+    if os.path.isfile(file_path):
+        return FileResponse(file_path)
+
+    # 否则返回 index.html（SPA 回退）
+    return FileResponse(os.path.join(static_dir, "index.html"))
