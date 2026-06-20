@@ -98,7 +98,7 @@ datainsight-ai/
 │   └── package.json
 └── docs/                 # 项目文档
     ├── PRD.md            # 产品需求文档
-    ├── plan.md           # 14天开发计划
+    ├── plan.md           # 技术实现方案
     └── resume.md         # 简历描述模板
 ```
 
@@ -139,7 +139,7 @@ datainsight-ai/
 
 ## 开发计划
 
-详见 [docs/plan.md](docs/plan.md)
+详见 [docs/plan.md](docs/plan.md)（技术实现方案）
 
 ## License
 
